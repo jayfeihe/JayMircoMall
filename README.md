@@ -45,11 +45,11 @@
        docker run --name picker-redis -p 6379:6379 -d redis --requirepass "JayHe"
      
      2.rabbitMQ启动
+     
        docker run -d --name rabbitmq --publish 5671:5671 \
-      --publish 5672:5672 --publish 4369:4369 --publish 25672:25672 --publish 15671:15671 --publish 15672:15672 \
-     rabbitmq:management
+      --publish 5672:5672 --publish 4369:4369 --publish 25672:25672 --publish 15671:15671 --publish 15672:15672 \ 
+      rabbitmq:management
      容器启动之后就可以访问web 管理端了 http://宿主机IP:15672，默认创建了一个 guest 用户，密码也是 guest
-
      
      
 - 1、先启动admin-server,eureka-server,conf-server三个基础服务
